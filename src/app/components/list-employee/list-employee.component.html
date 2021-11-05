@@ -1,0 +1,30 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor="let item of employees" >
+            <td> {{item.id}}</td>
+            <td> {{item.name}} </td>
+            <td> {{item.surname}} </td>
+            <td> {{item.mobile}} </td>
+            <td> {{item.email}} </td>
+            <td> {{item.position}} </td>
+            <td> {{item.salary | currency:"R " }} </td>
+            <td>
+                <button class="btn btn-danger" >D</button>
+                <button class="btn btn-primary mx-2" >E</button>
+                <button class="btn btn-info" >V</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

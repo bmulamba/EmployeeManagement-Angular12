@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "sdad",
+      "surname": "2dasc",
+      "mobile": "213213",
+      "email": "cascsa@email.com",
+      "position": "dadw",
+      "salary": "2323",
+      "id": 2
+    },
+    {
+      "name": "badin",
+      "surname": "mulamba",
+      "mobile": "082827373",
+      "email": "badibangamulamba@email.com",
+      "position": "Supervisor",
+      "salary": "4788",
+      "id": 3
+    },
+    {
+      "name": "kore",
+      "surname": "mulamba",
+      "mobile": "0987365323",
+      "email": "kore@email.com",
+      "position": "manager",
+      "salary": "353650",
+      "id": 4
+    },
+    {
+      "name": "angel",
+      "surname": "Ntumba",
+      "mobile": "09247472",
+      "email": "ntumba@email.com",
+      "position": "manager",
+      "salary": "5430",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
