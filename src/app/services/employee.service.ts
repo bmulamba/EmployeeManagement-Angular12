@@ -18,4 +18,8 @@ export class EmployeeService {
     return this.http.get(this.aipUrl);
   }
 
+  deteleEmployee(data : any){
+    return this.http.delete(`${this.aipUrl}/${data}`)
+  }
+
 }

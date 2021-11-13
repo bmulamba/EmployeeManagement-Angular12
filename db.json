@@ -40,6 +40,33 @@
       "position": "manager",
       "salary": "5430",
       "id": 5
+    },
+    {
+      "name": "wx",
+      "surname": "wxw",
+      "mobile": "112233",
+      "email": "xasx@email.com",
+      "position": "qdxe",
+      "salary": "23241",
+      "id": 6
+    },
+    {
+      "name": "akeala",
+      "surname": "mbuy",
+      "mobile": "929393333",
+      "email": "mbuy@email.com",
+      "position": "worker",
+      "salary": "4870",
+      "id": 7
+    },
+    {
+      "name": "BDBD",
+      "surname": "lwldwd",
+      "mobile": "1394002024",
+      "email": "badiiwie@gmail.com",
+      "position": "kdsksdj",
+      "salary": "3023",
+      "id": 8
     }
   ],
   "comments": [

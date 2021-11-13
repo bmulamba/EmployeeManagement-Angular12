@@ -8,20 +8,24 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { ListEmployeeComponent } from './components/list-employee/list-employee.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './widget/alert/alert.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     AddEmployeeComponent,
-    ListEmployeeComponent
+    ListEmployeeComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

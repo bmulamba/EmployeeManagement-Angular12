@@ -12,6 +12,8 @@ export class AddEmployeeComponent implements OnInit {
 
   constructor( private employeeService : EmployeeService, 
     private router : Router ) { }
+
+    isAlert : boolean = false;
   
 
   addEmployeenew = new FormGroup({
@@ -34,7 +36,19 @@ export class AddEmployeeComponent implements OnInit {
     );
     this.ngOnInit()
     this.addEmployeenew.reset({});
+    this.openAlert();
+    setTimeout(() => {
+      this.closeAlert();
+    }, 3000);
     // this.router.navigate(['/']);
+  }
+
+  closeAlert() {
+    this.isAlert = false;
+  }
+
+  openAlert() {
+    this.isAlert = true;
   }
 
 }

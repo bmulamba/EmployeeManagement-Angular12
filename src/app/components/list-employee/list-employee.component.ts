@@ -11,6 +11,7 @@ export class ListEmployeeComponent implements OnInit {
   constructor( private employeService : EmployeeService ) { }
 
   public employees : any;
+  searchItem : any
 
   ngOnInit(): void {
     this.employeService.getAll().subscribe(
@@ -18,6 +19,11 @@ export class ListEmployeeComponent implements OnInit {
         this.employees = data;
       }
     )
+  }
+
+  deteleEmp(id : number){
+    console.log(id);
+    
   }
 
 }

@@ -1,3 +1,6 @@
+<div class="mb-3">
+    <input type="text" class="form-control my-3" placeholder="Search here . . ." [(ngModel)]="searchItem" > 
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -12,16 +15,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr  *ngFor="let item of employees" >
+        <tr  *ngFor="let item of employees | filter : searchItem" >
             <td> {{item.id}}</td>
-            <td> {{item.name}} </td>
-            <td> {{item.surname}} </td>
+            <td> {{item.name | titlecase}} </td>
+            <td> {{item.surname | titlecase}} </td>
             <td> {{item.mobile}} </td>
             <td> {{item.email}} </td>
-            <td> {{item.position}} </td>
+            <td> {{item.position | titlecase}} </td>
             <td> {{item.salary | currency:"R " }} </td>
             <td>
-                <button class="btn btn-danger" >D</button>
+                <button class="btn btn-danger" (click)="deteleEmp(item.id)"  >D</button>
                 <button class="btn btn-primary mx-2" >E</button>
                 <button class="btn btn-info" >V</button>
             </td>

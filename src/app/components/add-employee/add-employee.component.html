@@ -1,4 +1,7 @@
 <div class="row">
+  <app-alert *ngIf="isAlert"  [typeAlert]="'alert-info'" (onClose)="closeAlert()" >
+   <p><strong>Succedd!</strong> You just add new Employee.</p> 
+  </app-alert>
     <div class="col-md-6 mx-auto">
         <h1>Add new Employee</h1>
         <form [formGroup]="addEmployeenew" (ngSubmit)="newEmployee()" >
