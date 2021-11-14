@@ -10,6 +10,8 @@ import { ListEmployeeComponent } from './components/list-employee/list-employee.
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlertComponent } from './widget/alert/alert.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
+import { EmployeeUpdateComponent } from './components/employee-update/employee-update.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     NavbarComponent,
     AddEmployeeComponent,
     ListEmployeeComponent,
-    AlertComponent
+    AlertComponent,
+    EmployeeDetailComponent,
+    EmployeeUpdateComponent
   ],
   imports: [
     BrowserModule,

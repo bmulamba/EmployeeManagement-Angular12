@@ -1,81 +1,34 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "name": "sdad",
-      "surname": "2dasc",
-      "mobile": "213213",
-      "email": "cascsa@email.com",
-      "position": "dadw",
-      "salary": "2323",
-      "id": 2
-    },
-    {
-      "name": "badin",
-      "surname": "mulamba",
-      "mobile": "082827373",
-      "email": "badibangamulamba@email.com",
-      "position": "Supervisor",
-      "salary": "4788",
-      "id": 3
+      "name": "john",
+      "surname": "ntita",
+      "mobile": "0836623732",
+      "email": "john@gmail.com",
+      "position": "suprvisor",
+      "salary": "2938",
+      "id": 11
     },
     {
       "name": "kore",
-      "surname": "mulamba",
-      "mobile": "0987365323",
-      "email": "kore@email.com",
-      "position": "manager",
-      "salary": "353650",
-      "id": 4
+      "surname": "nkola",
+      "mobile": "0873737722",
+      "email": "kore@gmail.com",
+      "position": "ceo",
+      "salary": "93830",
+      "id": 14
     },
     {
-      "name": "angel",
-      "surname": "Ntumba",
-      "mobile": "09247472",
-      "email": "ntumba@email.com",
-      "position": "manager",
-      "salary": "5430",
-      "id": 5
-    },
-    {
-      "name": "wx",
-      "surname": "wxw",
-      "mobile": "112233",
-      "email": "xasx@email.com",
-      "position": "qdxe",
-      "salary": "23241",
-      "id": 6
-    },
-    {
-      "name": "akeala",
-      "surname": "mbuy",
-      "mobile": "929393333",
-      "email": "mbuy@email.com",
-      "position": "worker",
-      "salary": "4870",
-      "id": 7
-    },
-    {
-      "name": "BDBD",
-      "surname": "lwldwd",
-      "mobile": "1394002024",
-      "email": "badiiwie@gmail.com",
-      "position": "kdsksdj",
-      "salary": "3023",
-      "id": 8
+      "name": "eric",
+      "surname": "tshiamala",
+      "mobile": "83993284",
+      "email": "badin@gmil.com",
+      "position": "pretre",
+      "salary": "4000",
+      "id": 15
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

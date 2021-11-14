@@ -24,9 +24,9 @@
             <td> {{item.position | titlecase}} </td>
             <td> {{item.salary | currency:"R " }} </td>
             <td>
-                <button class="btn btn-danger" (click)="deteleEmp(item.id)"  >D</button>
-                <button class="btn btn-primary mx-2" >E</button>
-                <button class="btn btn-info" >V</button>
+                <button class="btn btn-danger" (click)="delete(item.id)" ><i class="fas fa-trash"></i></button>
+                <button class="btn btn-primary mx-2" routerLink="edith/{{item.id}}" ><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                <button class="btn btn-info" routerLink="employee/{{item.id}}" ><i class="fa fa-address-book" aria-hidden="true"></i></button>
             </td>
         </tr>
     </tbody>

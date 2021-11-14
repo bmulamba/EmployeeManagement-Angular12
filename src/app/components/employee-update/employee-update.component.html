@@ -1,0 +1,36 @@
+<div class="row">
+    <app-alert *ngIf="isAlert"  [typeAlert]="'alert-info'" (onClose)="closeAlert()" >
+     <p><strong>Succedd!</strong> You just add new Employee.</p> 
+    </app-alert>
+      <div class="col-md-6 mx-auto">
+          <h1>Edith Employee</h1>
+          <form [formGroup]="addEmployeenew" (ngSubmit)="newEmployee()" >
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"><b> Name </b></label>
+                <input type="name" class="form-control"  formControlName="name" >
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"><b> Surname </b></label>
+                <input type="surname" class="form-control" formControlName="surname" >
+              </div>
+              <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"><b> Mobile </b></label>
+                  <input type="mobile" class="form-control"  formControlName="mobile" >
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"><b> Email </b></label>
+                  <input type="email" class="form-control" formControlName="email" >
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"><b> Position </b></label>
+                  <input type="position" class="form-control"  formControlName="position" >
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"><b> Salary </b></label>
+                  <input type="salary" class="form-control" formControlName="salary" >
+                </div>
+              <button type="submit" class="btn btn-info ">Update</button>
+              <button type="submit" class="btn btn-danger mx-4">Cancel</button>
+          </form>
+      </div>
+  </div>

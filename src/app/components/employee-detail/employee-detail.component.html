@@ -1,0 +1,25 @@
+
+<div class="container">
+    <div class="row py-5">
+        <div class="col-md-6 ">
+            <img src= "https://airlinkflight.org/male-placeholder-image/" alt="">
+        </div>
+        <div class="col-md-6">
+            <h1>Personal Detail</h1> 
+            <hr>
+            Name : {{employee.name | titlecase }} <br> <br>
+            Surame : {{employee.surname | titlecase }} <br> <br>
+            Email : {{employee.email | titlecase }} <br> <br>
+            Phome : {{employee.mobile | titlecase }} <br> <br>
+            Position : {{employee.position | titlecase }} <br> <br>
+            Salary : {{employee.salary | currency: "R " }} <br>
+
+        </div>
+    </div>
+</div>
+
+<div class="button-home">
+    <button class="btn btn-primary"  (click)="goHome()" >Home</button>
+</div>
+
+
