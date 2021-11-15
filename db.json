@@ -1,8 +1,8 @@
 {
   "posts": [
     {
-      "name": "john",
-      "surname": "ntita",
+      "name": "johnny",
+      "surname": "kayembe",
       "mobile": "0836623732",
       "email": "john@gmail.com",
       "position": "suprvisor",
@@ -15,17 +15,26 @@
       "mobile": "0873737722",
       "email": "kore@gmail.com",
       "position": "ceo",
-      "salary": "93830",
+      "salary": "9380",
       "id": 14
     },
     {
-      "name": "eric",
+      "name": "ericson",
       "surname": "tshiamala",
       "mobile": "83993284",
       "email": "badin@gmil.com",
       "position": "pretre",
       "salary": "4000",
       "id": 15
+    },
+    {
+      "name": "angel",
+      "surname": "ntumba",
+      "mobile": "017273382",
+      "email": "ntumba@gmail.com",
+      "position": "professeur",
+      "salary": "3426",
+      "id": 16
     }
   ],
   "comments": [],

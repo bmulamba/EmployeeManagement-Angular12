@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Employee } from 'src/app/model/employee';
 import { EmployeeService } from './../../services/employee.service'
 
 @Component({
@@ -10,13 +11,16 @@ import { EmployeeService } from './../../services/employee.service'
 })
 export class EmployeeUpdateComponent implements OnInit {
 
+  public employeeId : number;
+  // empoyee : Employee;
+
   constructor( private employeeService : EmployeeService, 
-    private router : Router ) { }
+               private route : Router,
+               private router : ActivatedRoute ) { }
 
-    isAlert : boolean = false;
-  
+  isAlert : boolean = false;
 
-  addEmployeenew = new FormGroup({
+  Editheemployee = new FormGroup({
     name : new FormControl(''),
     surname : new FormControl(''),
     mobile : new FormControl(''),
@@ -26,22 +30,37 @@ export class EmployeeUpdateComponent implements OnInit {
   })
 
   ngOnInit(): void {
+
+    this.employeeId = this.router.snapshot.params['id']
+    this.employeeService.find(this.employeeId).subscribe(
+      (data : Employee) => {
+        this.Editheemployee = new FormGroup({
+          name : new FormControl(data['name']),
+          surname : new FormControl(data['surname']),
+          mobile : new FormControl(data['mobile']),
+          email : new FormControl(data['email']),
+          position : new FormControl(data['position']),
+          salary : new FormControl(data['salary']),
+        })
+      }
+    )    
   }
 
-  newEmployee() {
-    this.employeeService.addEmployee(this.addEmployeenew.value).subscribe(
-      res => {
-        console.log(res);        
-      }
-    );
-    this.ngOnInit()
-    this.addEmployeenew.reset({});
-    this.openAlert();
-    setTimeout(() => {
-      this.closeAlert();
-    }, 3000);
-    // this.router.navigate(['/']);
+  edithemployee() {
+    // console.log(this.Editheemployee.value);
+    this.employeeService.edithEmployee(this.employeeId, this.Editheemployee.value).subscribe(
+     (data : Employee) => {
+       console.log(data);
+     }
+   );
+  //  console.log(this.Editheemployee.value);
+  this.Editheemployee.reset();
+  setTimeout(() => {
+    this.openAlert()
+  }, 2000)
+   
   }
+
 
   closeAlert() {
     this.isAlert = false;
@@ -49,6 +68,10 @@ export class EmployeeUpdateComponent implements OnInit {
 
   openAlert() {
     this.isAlert = true;
+  }
+
+  goHome(){
+    this.route.navigateByUrl('/')
   }
 
 }

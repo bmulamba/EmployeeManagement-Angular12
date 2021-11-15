@@ -8,38 +8,42 @@ import { catchError } from 'rxjs/operators'
 })
 export class EmployeeService {
 
-  public aipUrl = 'http://localhost:3000/posts';
+  public apiUrl = 'http://localhost:3000/posts';
 
   constructor( private http : HttpClient ) { }
 
   addEmployee(employee : any):Observable<any>{
-    return this.http.post(this.aipUrl, employee)
+    return this.http.post(this.apiUrl, employee)
     .pipe(
       catchError(this.errorHandler)
     )
   }
 
   getAll():Observable<any> {
-    return this.http.get(this.aipUrl)
+    return this.http.get(this.apiUrl)
     .pipe(
       catchError(this.errorHandler)
     );
   }
 
   find(id : number): Observable<any>{
-    return this.http.get(this.aipUrl + '/' + id)
+    return this.http.get(this.apiUrl + '/' + id)
   }
   
 
   deleteEmdployee(id : number) : Observable<any> {
-    return this.http.delete(this.aipUrl + '/' + id)
+    return this.http.delete(this.apiUrl + '/' + id)
     .pipe(
       catchError(this.errorHandler)
     );
   }
 
+  edithEmployee(id: number, employee: any):Observable<any>{
+    return this.http.put(this.apiUrl + '/' + id, employee)
+  }
 
-  errorHandler(error:any) {
+
+  errorHandler(error:any){
     let errorMessage = '';
     if(error.error instanceof ErrorEvent) {
       errorMessage = error.error.message;
