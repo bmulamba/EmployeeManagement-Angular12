@@ -12,6 +12,9 @@ import { AlertComponent } from './widget/alert/alert.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
 import { EmployeeUpdateComponent } from './components/employee-update/employee-update.component';
+import { LoginComponent } from './users/login/login.component';
+import { RegistrationComponent } from './users/registration/registration.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { EmployeeUpdateComponent } from './components/employee-update/employee-u
     ListEmployeeComponent,
     AlertComponent,
     EmployeeDetailComponent,
-    EmployeeUpdateComponent
+    EmployeeUpdateComponent,
+    LoginComponent,
+    RegistrationComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
