@@ -1,8 +1,29 @@
 
-
 header {
     background-image: url('./../../../assets/images/bsite.jpg');
     background-position: fixed;
     background-size: cover;
     height: 80vh;
+
+}
+
+.center-text {
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.btn {
+    width: 30vh;
+    height: 40px;
+    font-size: 19px;
+    margin-top: 40px;
 }
