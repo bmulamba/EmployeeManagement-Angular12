@@ -11,7 +11,7 @@ import { RegistrationComponent } from './users/registration/registration.compone
 
 const routes: Routes = [
   {path : '', component : HomeComponent},
-  {path : 'list', component : ListEmployeeComponent},
+  {path : 'dashboard', component : ListEmployeeComponent},
   {path : 'add', component : AddEmployeeComponent},
   {path : 'edith/:id', component : EmployeeUpdateComponent},
   {path : 'employee/:id', component : EmployeeDetailComponent},

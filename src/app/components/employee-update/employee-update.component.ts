@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from 'src/app/model/employee';
-import { EmployeeService } from './../../services/employee.service'
+import { EmployeeService } from '../../services/employees/employee.service'
 
 @Component({
   selector: 'app-employee-update',

@@ -1,33 +1,37 @@
-<div class="mb-3">
-    <input type="text" class="form-control my-3" placeholder="Search here . . ." [(ngModel)]="searchItem" > 
+<div class="container">
+    <div class="row">
+        <div class="mb-3">
+            <input type="text" class="form-control my-3" placeholder="Search here . . ." [(ngModel)]="searchItem" > 
+        </div>
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr  *ngFor="let item of employees | filter : searchItem" >
+                    <td> {{item.id}}</td>
+                    <td> {{item.name | titlecase}} </td>
+                    <td> {{item.surname | titlecase}} </td>
+                    <td> {{item.mobile}} </td>
+                    <td> {{item.email}} </td>
+                    <td> {{item.position | titlecase}} </td>
+                    <td> {{item.salary | currency:"R " }} </td>
+                    <td>
+                        <button class="btn btn-danger" (click)="delete(item.id)" ><i class="fas fa-trash"></i></button>
+                        <button class="btn btn-primary mx-2" routerLink="/edith/{{item.id}}" ><i class="fa fa-pencil" aria-hidden="true"></i></button>
+                        <button class="btn btn-info" routerLink="/employee/{{item.id}}" ><i class="fa fa-address-book" aria-hidden="true"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
-<table class="table">
-    <thead class="table-dark">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>Mobile</th>
-            <th>Email</th>
-            <th>Position</th>
-            <th>Salary</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr  *ngFor="let item of employees | filter : searchItem" >
-            <td> {{item.id}}</td>
-            <td> {{item.name | titlecase}} </td>
-            <td> {{item.surname | titlecase}} </td>
-            <td> {{item.mobile}} </td>
-            <td> {{item.email}} </td>
-            <td> {{item.position | titlecase}} </td>
-            <td> {{item.salary | currency:"R " }} </td>
-            <td>
-                <button class="btn btn-danger" (click)="delete(item.id)" ><i class="fas fa-trash"></i></button>
-                <button class="btn btn-primary mx-2" routerLink="edith/{{item.id}}" ><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                <button class="btn btn-info" routerLink="employee/{{item.id}}" ><i class="fa fa-address-book" aria-hidden="true"></i></button>
-            </td>
-        </tr>
-    </tbody>
-</table>

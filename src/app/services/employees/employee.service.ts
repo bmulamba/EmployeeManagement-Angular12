@@ -8,7 +8,7 @@ import { catchError } from 'rxjs/operators'
 })
 export class EmployeeService {
 
-  public apiUrl = 'http://localhost:3000/posts';
+  public apiUrl = 'http://localhost:3000/employees';
 
   constructor( private http : HttpClient ) { }
 

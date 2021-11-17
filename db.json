@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "employees": [
     {
       "name": "johnny",
       "surname": "kayembe",
@@ -7,7 +7,7 @@
       "email": "john@gmail.com",
       "position": "suprvisor",
       "salary": "2938",
-      "id": 11
+      "id": 1
     },
     {
       "name": "kore",
@@ -16,7 +16,7 @@
       "email": "kore@gmail.com",
       "position": "ceo",
       "salary": "9380",
-      "id": 14
+      "id": 2
     },
     {
       "name": "ericson",
@@ -25,19 +25,25 @@
       "email": "badin@gmil.com",
       "position": "pretre",
       "salary": "4000",
-      "id": 15
-    },
-    {
-      "name": "angel",
-      "surname": "ntumba",
-      "mobile": "017273382",
-      "email": "ntumba@gmail.com",
-      "position": "professeur",
-      "salary": "3426",
-      "id": 16
+      "id": 3
     }
   ],
-  "comments": [],
+  "signupUsers": [
+    {
+      "name": "badin",
+      "mobile": 9883837,
+      "email": "badin@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "kore",
+      "mobile": 7127838,
+      "email": "kore@gmail.com",
+      "password": "12345",
+      "id": 2
+    }
+  ],
   "profile": {
     "name": "typicode"
   }

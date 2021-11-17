@@ -1,16 +1,16 @@
 <div class="row">
     <div class="col-md-4 my-5 mx-auto">
         <h1 class="py-4" >User Login</h1>
-        <form  >
+        <form [formGroup]="loginUser" (ngSubmit)="login()" >
             <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"><b> Name </b></label>
-            <input type="email" class="form-control"  formControlName="name" placeholder="Name"  >
+            <input type="email" class="form-control"  formControlName="email" placeholder="Name"  >
             </div>
             <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label"><b> Password </b></label>
-            <input type="password" class="form-control" placeholder="Password" formControlName="Password" >
+            <input type="password" class="form-control" placeholder="password" formControlName="password" >
             </div>
-            <span type="submit" class=" d-block btn bg-primary">Login</span>
+            <button type="submit" class=" d-block btn bg-primary">Login</button>
         </form>
         <h5 class="py-4">Don't have an Account <a href="" routerLink="/register" >Register</a> here</h5>
       </div>
